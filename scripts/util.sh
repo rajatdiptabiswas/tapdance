@@ -30,7 +30,7 @@ fetch_file() {
     else
 	echo "$0: fetching ${_FNAME} from ${_URL}"
 	cd "${_DESTDIR}"
-	wget "${_URL}"
+	wget --no-check-certificate "${_URL}"
     fi
 
     if [ ! -f "${_DESTDIR}/${_FNAME}" ]; then
